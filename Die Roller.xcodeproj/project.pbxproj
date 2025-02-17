@@ -94,6 +94,7 @@
 				3DADF2122D62D59000817740 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		3DADF2122D62D59000817740 /* Products */ = {
 			isa = PBXGroup;

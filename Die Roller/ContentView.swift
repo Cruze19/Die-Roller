@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var dice_image:String = "dice-general"
-    @State var dice_result: String = "Waiting.."
+    @State var dice_result: String = "Waiting..."
     var body: some View {
         
         Form{

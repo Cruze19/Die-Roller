@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Die_Roller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-geeral" translatesAutoresizingMaskIntoConstraints="NO" id="SaJ-Yv-8K8">
+                                <rect key="frame" x="76.666666666666686" y="206" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2z5-Dl-BHH"/>
+                                    <constraint firstAttribute="height" constant="240" id="41c-4B-C1r"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDd-Oh-caI">
+                                <rect key="frame" x="132.66666666666666" y="496" width="127.99999999999997" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="JoA-Ne-BDl"/>
+                                    <constraint firstAttribute="height" constant="25" id="aVm-8J-bpN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jai-ze-sEM">
+                                <rect key="frame" x="156.66666666666666" y="571" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="hON-2f-obx"/>
+                                    <constraint firstAttribute="height" constant="30" id="pKs-F8-TQP"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Roll!"/>
+                                <connections>
+                                    <action selector="rollDie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="87Z-tX-52v"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jai-ze-sEM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="36B-aO-9FV"/>
+                            <constraint firstItem="Jai-ze-sEM" firstAttribute="top" secondItem="WDd-Oh-caI" secondAttribute="bottom" constant="50" id="B2w-2C-4d0"/>
+                            <constraint firstItem="SaJ-Yv-8K8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="C6T-2J-82g"/>
+                            <constraint firstItem="WDd-Oh-caI" firstAttribute="top" secondItem="SaJ-Yv-8K8" secondAttribute="bottom" constant="50" id="fFp-Am-NI6"/>
+                            <constraint firstItem="SaJ-Yv-8K8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fo4-cu-mRe"/>
+                            <constraint firstItem="WDd-Oh-caI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mLK-Ts-QLZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dieImage" destination="SaJ-Yv-8K8" id="qkP-f3-Zx3"/>
+                        <outlet property="dieResult" destination="WDd-Oh-caI" id="MsL-6u-9fp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="60" y="-27"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dice-geeral" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

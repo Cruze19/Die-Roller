@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Die Roller
 //
-//  Created by Jamisel Roman on 2/16/25.
+//  Created by Ennis Cruz on 2/16/25.
 //
 
 import UIKit
